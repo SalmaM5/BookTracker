@@ -3,14 +3,17 @@
 ![pic](./Project2Pic1.png)
 ![pic](./Project2Pic2.png)
 
-**My project Name is BookTracker**
+**project Name : BookTracker**
+
+**Descrption**
 
   - The users must sign in or sign up to use the Book Tracker. This personal tracker is aimed to people who love to read and want to track their reading progress for a current book 
 
 
 **Getting started**
 
-- the project link :
+- the project link : https://books-tracker-893162135f5a.herokuapp.com/
+
 
 
 - After the book is added, the user can see a list which includes all the added books. In addition, they can easily access the wishlist to see the book names.
@@ -27,11 +30,11 @@
 - CSS
 - MongoDB
 - npm packages
+- Bootstrap
 
 
 **Next steps**
 
 - Users can upload images of their books.
-
 - Users  have the option to share their book tracking with other users on the same website. 
 
