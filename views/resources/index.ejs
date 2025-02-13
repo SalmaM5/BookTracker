@@ -1,0 +1,23 @@
+<%- include('../partials/head') %>
+
+<div class="container book-list-page">
+
+ 
+    <% books.forEach((book) => { %>
+
+        <div class="card mt-2" style="width: 18rem;">
+            
+             <div class="card-body"><a href="/resources/<%= book._id%>">
+              <h5 class="card-title"><%= book.title %></h5>
+              </a>
+            </div>
+          </div>
+
+    <% }) %>  
+
+
+</div>
+
+
+
+<%- include('../partials/footer') %>

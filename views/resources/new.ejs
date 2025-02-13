@@ -1,0 +1,46 @@
+<%- include('../partials/head') %>
+
+<div class="container add-page">
+
+  <h3> Add A new Book</h3>
+
+  <form action="/resources/<%= user._id %>" method="POST">
+
+     
+      <label for="">Book Title :</label> 
+     <input type="text" name="title">
+
+    <label for="">Book Author:</label>
+    <input type="text" name="author">
+
+    <label for="">Descrption:</label>
+    <textarea name="descrption"  onkeyup="textAreaAdjust(this)" style="overflow:hidden"></textarea>
+
+    <label for="">The Book Total pages: </label>
+    <input type="number" name="Totalpages">
+
+    <label for="">Current reading Page:</label>
+    <input type="number" name="Currentpages">
+
+    <p> Current Book Status:</p>
+    <div class="radio-group">
+      <label><input type="radio" name="status" value="reading"> Reading</label>
+      <label><input type="radio" name="status" value="completed"> Completed</label>
+      <label><input type="radio" name="status" value="whishlist"> Wishlist</label>
+  </div>
+
+   
+      
+
+    <button type="submit">Add Book</button>
+
+
+
+  </form>
+
+
+
+</div>
+
+
+<%- include('../partials/footer') %>

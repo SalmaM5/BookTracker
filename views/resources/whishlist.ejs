@@ -1,0 +1,12 @@
+<%- include('../partials/head') %>
+
+
+<div class="container wishlist-page">
+<h1> wishlist :</h1>
+
+<%favorites.forEach((favorite) => {%>
+    <p><%= favorite.title %></p>
+<%})%>
+</div>
+
+<%- include('../partials/footer') %>

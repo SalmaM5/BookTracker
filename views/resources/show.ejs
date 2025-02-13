@@ -1,0 +1,33 @@
+<%- include('../partials/head') %>
+
+
+
+<div class="container book-details-page">
+ 
+
+    <h1>Book Details</h1>
+    <p><strong>Book Title:</strong> <%= showBook.title %></p>
+    <p><strong>Author:</strong> <%= showBook.author %></p>
+    <p><strong>Description:</strong> <%= showBook.descrption %></p>
+    <p><strong>Total Pages:</strong> <%= showBook.Totalpages %></p>
+    <p><strong>Book Status:</strong> <%= showBook.status %></p>
+    <p><strong>Current Pages:</strong> <%= showBook.Currentpages %></p>
+
+        <% if (showBook.owner._id.equals(user._id)) { %>
+            <form action="/resources/<%= user._id %>/<%= showBook._id %>?_method=DELETE" method="POST">
+                <button type="submit" class="btn btn-danger">Remove Book</button>
+            </form>
+           <button><a href="/resources/<%= user._id %>/<%= showBook._id %>/edit">Edit this Book</a></button> 
+    
+            <% } %>
+   
+
+
+
+
+
+</div>
+
+
+
+<%- include('../partials/footer') %>

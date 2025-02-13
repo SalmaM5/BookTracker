@@ -1,0 +1,55 @@
+<%- include('../partials/head') %>
+
+
+<div class="container edit-page">
+
+    <h3> Edit Book</h3>
+  
+    <form action="/resources/<%= user._id %>/<%= editBook._id %>?_method=PUT" method="POST">
+  
+       <label for="">Book Title :</label>
+      <input type="text" name="title" value="<%= editBook.title %>">
+  
+      <label for="">Book Author:</label>
+      <input type="text" name="author" value="<%= editBook.author %>">
+  
+      <label for="">Descrption:</label>
+      <textarea name="descrption"  onkeyup="textAreaAdjust(this)" style="overflow:hidden";><%- editBook.descrption %></textarea>
+  
+      <label for="">The Book Total pages: </label>
+      <input type="number" name="Totalpages" value="<%= editBook.Totalpages %>">
+  
+      <label for="">Current reading Page:</label>
+      <input type="number" name="Currentpages" value="<%= editBook.Currentpages %>">
+      <p> Current Book Status:</p>
+              
+         
+        
+          <label for="reading">Reading</label>
+          <input type="radio" name="status" value="reading"<% if (editBook.status == 'reading') { %>checked<% } %>>
+  
+          <label for="completed">Completed</label>
+          <input type="radio" name="status" value="completed"<% if (editBook.status == 'completed')  { %>checked<% } %>>
+  
+          <label for="whishlist">Whishlist</label>
+          <input type="radio" name="status"  value="whishlist" <% if (editBook.status == 'whishlist')  { %>checked<% } %>>
+
+     
+
+          
+          
+        
+  
+      <button type="submit"> Edit Book</button>
+  
+  
+  
+    </form>
+  
+
+
+
+
+
+
+<%- include('../partials/footer') %>
